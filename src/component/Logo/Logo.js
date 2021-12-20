@@ -1,10 +1,14 @@
 import React from 'react'
+import { Wrapper } from './Logo.styles'
+import Triangle from './Triangle'
 
 export default function Logo() {
     return (
-        <div>
-            <div></div>
-            <p>windbnb</p>
-        </div>
+        <Wrapper>
+            <div>
+                <Triangle />
+                <p>windbnb</p>
+            </div>
+        </Wrapper>
     )
 }
