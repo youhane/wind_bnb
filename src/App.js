@@ -1,12 +1,11 @@
 import Footer from "./component/Footer/Footer";
-import Logo from "./component/Logo/Logo";
+import Navbar from "./component/Navbar/Navbar";
 import { GlobalStyle } from "./GlobalStyles";
 
 function App() {
   return (
     <div className="App">
-      <Logo />
-      <h1>App</h1>
+      <Navbar />
       <Footer />
       <GlobalStyle />
     </div>
