@@ -6,4 +6,8 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: Montserrat;
     }
+
+    .grid{
+        display: grid;
+    }
 `
