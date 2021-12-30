@@ -7,13 +7,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faStar)
 
-const HOTEL_DATA = [
-    {
-        img: ''
-    }
-]
-
-export default function Card() {
+export default function Card({ host, room, rating, img }) {
     return (
         <div>
             <img src='' />
