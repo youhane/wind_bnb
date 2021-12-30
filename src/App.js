@@ -52,12 +52,17 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <h2>Stays in Finland</h2>
-      <div className="grid">
-        {HOTEL_DATA.map((hotel) => {
-          return <Card host={hotel.host} room={hotel.room} rating={hotel.rating} desc={hotel.desc} img={hotel.img} />
-        })}
-      </div>
+      <body>
+        <div className="title">
+          <h2>Stays in Finland</h2>
+          <p>12+ stays</p>
+        </div>
+        <div className="grid">
+          {HOTEL_DATA.map((hotel) => {
+            return <Card host={hotel.host} room={hotel.room} rating={hotel.rating} desc={hotel.desc} img={hotel.img} />
+          })}
+        </div>
+      </body>
       <Footer />
       <GlobalStyle />
     </div>

@@ -7,7 +7,19 @@ export const GlobalStyle = createGlobalStyle`
         font-family: Montserrat;
     }
 
+    body{
+        margin: 0 3rem;
+    }
+
+    .title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1rem;
+    }
+
     .grid{
         display: grid;
+        grid-template-columns: auto auto auto;
     }
 `
