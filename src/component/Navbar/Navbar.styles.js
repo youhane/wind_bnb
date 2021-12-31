@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
         display: flex;
         align-content: center;
     }
-    div{
+    .mainNav{
         display: flex;
         align-content: center;
         justify-content: space-between;
