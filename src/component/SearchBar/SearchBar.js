@@ -1,15 +1,38 @@
-import { Formik } from 'formik'
+import { Formik, Field } from 'formik'
 import React from 'react'
-import { SearchButton, StyledForm, StyledInput, Wrapper } from './SearchBar.styles'
+import { CustomLabel, SearchButton, StyledForm, StyledInput, Wrapper } from './SearchBar.styles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import AddGuests from './AddGuests/AddGuests'
 
 library.add(faSearch)
 
 export default function SearchBar() {
     const initialValues = { location: '', guests: '' }
+    const location = [
+        {
+            key: 1,
+            value: 1,
+            text: 'Helsinki, Finland'
+        },
+        {
+            key: 2,
+            value: 2,
+            text: 'Turku, Finland'
+        },
+        {
+            key: 3,
+            value: 3,
+            text: 'Oulu, Finland'
+        },
+        {
+            key: 4,
+            value: 4,
+            text: 'Vaasa, Finland'
+        },
+    ]
     return (
         <Wrapper>
             <Formik
@@ -17,8 +40,16 @@ export default function SearchBar() {
             >
                 <StyledForm>
                     <div className='inputs'>
-                        <StyledInput name="location" placeholder='Add location' label="Location" />
+                        <CustomLabel>
+                            <label htmlFor='location'>Location</label>
+                            <Field as="select" name="location" placeholder='Add location' options={location}>
+                                {location.map((data) => {
+                                    return <option value={data.value} key={data.key}>{data.text}</option>
+                                })}
+                            </Field>
+                        </CustomLabel>
                         <StyledInput type="text" name="guests" placeholder="Add guests" label="Guests" />
+                        <AddGuests type="Adults" text="Ages 13 or above" />
                         <SearchButton type='submit'><FontAwesomeIcon icon="search" /><p>Search</p></SearchButton>
                     </div>
                 </StyledForm>

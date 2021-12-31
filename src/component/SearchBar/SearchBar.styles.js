@@ -17,17 +17,14 @@ export const StyledForm = styled(Form)`
     background: white;
     height: 50%;
     width: 100%;
-    display: flex;
     justify-content: center;
 
     .inputs{
         border-radius: 1rem;
         box-shadow: 0px 1px 6px 0px #0000001A;
-        height: 15%;
+        height: 25%;
         width: 50%;
         margin-top: 3rem;
-        display: flex;
-        justify-content: space-between;
         align-items: center;
     }
 
@@ -37,7 +34,6 @@ export const StyledForm = styled(Form)`
     }
 
     .inputs .field{
-        display: flex;
         flex-direction: column;
         padding: 1rem;
         border-radius: 1rem;
@@ -62,8 +58,6 @@ export const SearchButton = styled.button`
     background: #EB5757;
     color:white;
     border: none;
-    display: flex;
-    align-items: center;
     padding: 1rem;
     border-radius: .7rem;
     height: 3rem;
@@ -72,5 +66,20 @@ export const SearchButton = styled.button`
     }
     :hover{
         filter: brightness(85%);
+    }
+`
+export const CustomLabel = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    border-radius: .7rem;
+    select{
+        border: none;
+        outline: none;
+        margin-top: .7rem;
+    }
+    :focus-within{
+        border: 1px solid black;
     }
 `
