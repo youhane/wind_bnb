@@ -5,11 +5,11 @@ import { GuestContext } from './GuestsContext'
 
 export default function AddGuests({ type, text }) {
     let [input, setInput] = useState(0)
-    const { setnumberOfAdults } = useContext(GuestContext)
+    const { setNumberOfAdults } = useContext(GuestContext)
 
     useEffect(() => {
-        setnumberOfAdults(input)
-    }, [input, setnumberOfAdults])
+        setNumberOfAdults(input)
+    }, [input, setNumberOfAdults])
 
     return (
         <Wrapper>

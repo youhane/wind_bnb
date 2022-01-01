@@ -11,8 +11,8 @@ import { GuestContext } from './AddGuests/GuestsContext'
 library.add(faSearch)
 
 export default function SearchBar() {
-    const [numberOfAdults, setnumberOfAdults] = useState(0)
-    const adultGuestProvider = useMemo(() => ({ numberOfAdults, setnumberOfAdults }), [numberOfAdults, setnumberOfAdults])
+    const [numberOfAdults, setNumberOfAdults] = useState(0)
+    const guestProvider = useMemo(() => ({ numberOfAdults, setNumberOfAdults }), [numberOfAdults, setNumberOfAdults])
 
     const initialValues = { location: '', guests: '' }
 
@@ -62,7 +62,7 @@ export default function SearchBar() {
                             label="Guests"
                             value={numberOfAdults ? numberOfAdults : ''}
                         />
-                        <GuestContext.Provider value={adultGuestProvider}>
+                        <GuestContext.Provider value={guestProvider}>
                             <AddGuests type="Adults" text="Ages 13 or above" />
                         </GuestContext.Provider>
                         <SearchButton type='submit'><FontAwesomeIcon icon="search" /><p>Search</p></SearchButton>
