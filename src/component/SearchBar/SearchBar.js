@@ -1,16 +1,21 @@
 import { Formik, Field } from 'formik'
-import React from 'react'
+import React, { useMemo, useState } from 'react'
 import { CustomLabel, SearchButton, StyledForm, StyledInput, Wrapper } from './SearchBar.styles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import AddGuests from './AddGuests/AddGuests'
+import { GuestContext } from './AddGuests/GuestsContext'
 
 library.add(faSearch)
 
 export default function SearchBar() {
+    const [numberOfAdults, setnumberOfAdults] = useState(0)
+    const adultGuestProvider = useMemo(() => ({ numberOfAdults, setnumberOfAdults }), [numberOfAdults, setnumberOfAdults])
+
     const initialValues = { location: '', guests: '' }
+
     const location = [
         {
             key: 1,
@@ -33,7 +38,9 @@ export default function SearchBar() {
             text: 'Vaasa, Finland'
         },
     ]
+
     return (
+
         <Wrapper>
             <Formik
                 initialValues={initialValues}
@@ -48,8 +55,16 @@ export default function SearchBar() {
                                 })}
                             </Field>
                         </CustomLabel>
-                        <StyledInput type="text" name="guests" placeholder="Add guests" label="Guests" />
-                        <AddGuests type="Adults" text="Ages 13 or above" />
+                        <StyledInput
+                            type="text"
+                            name="guests"
+                            placeholder="Add guests"
+                            label="Guests"
+                            value={numberOfAdults ? numberOfAdults : ''}
+                        />
+                        <GuestContext.Provider value={adultGuestProvider}>
+                            <AddGuests type="Adults" text="Ages 13 or above" />
+                        </GuestContext.Provider>
                         <SearchButton type='submit'><FontAwesomeIcon icon="search" /><p>Search</p></SearchButton>
                     </div>
                 </StyledForm>
