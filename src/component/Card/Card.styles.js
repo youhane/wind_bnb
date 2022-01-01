@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
     width: 25rem;
     img{
         width: 100%;
+        height: 17rem;
+        object-fit: cover;
         border-radius: 1rem;
     }
     div{

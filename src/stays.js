@@ -1,4 +1,4 @@
-[
+export const HOTEL_DATA = [
   {
     "city": "Helsinki",
     "country": "Finland",

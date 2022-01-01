@@ -7,13 +7,13 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faStar)
 
-export default function Card({ host, room, rating, desc, img }) {
+export default function Card({ host, room, beds, rating, desc, img }) {
     return (
         <Wrapper>
             <img src={img} alt={img} />
             <Info>
                 {host && <Host>Super Host</Host>}
-                <p className='room'>{room}</p>
+                <p className='room'>{room} . {beds} beds</p>
                 <Rating>
                     <FontAwesomeIcon icon="star" color='red' />
                     <p>{rating}</p>
