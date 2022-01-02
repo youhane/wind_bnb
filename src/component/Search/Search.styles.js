@@ -22,4 +22,14 @@ export const Wrapper = styled.div`
         border: none;
         outline:none
     }
+
+    @media (max-width: 376px){
+        div{
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div *{
+            padding: 1.5rem;
+        }
+    }
 `

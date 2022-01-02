@@ -12,4 +12,10 @@ export const Wrapper = styled.div`
         color: #EB5757;
         margin-left: 1rem;
     }
+
+    @media (max-width: 376px){
+        *{
+            margin-top: 1rem;
+        }
+    }
 `

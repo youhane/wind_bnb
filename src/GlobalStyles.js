@@ -22,4 +22,13 @@ export const GlobalStyle = createGlobalStyle`
         display: grid;
         grid-template-columns: auto auto auto;
     }
+
+    @media (max-width: 376px){
+        .title{
+            width: 40rem;
+        }
+        .grid{
+            grid-template-columns: auto;
+        }
+    }
 `

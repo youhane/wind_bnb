@@ -11,4 +11,11 @@ export const Wrapper = styled.div`
         justify-content: space-between;
         margin: .5rem 1rem;
     }
+
+    @media (max-width: 376px){
+        width: 50rem;
+        .mainNav{
+            flex-direction: column;
+        }
+    }
 `

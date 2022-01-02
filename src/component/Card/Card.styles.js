@@ -17,6 +17,12 @@ export const Wrapper = styled.div`
         margin-top: .5rem;
         font-weight: 600;
     }
+    @media (max-width: 376px){
+        img{
+            width: 40rem;
+            height: 25rem;
+        }
+    }
 `
 
 export const Host = styled.div`
@@ -40,5 +46,10 @@ export const Info = styled.div`
 
     .room{
         font-size: .9rem;
+    }
+    @media (max-width: 376px){
+        width: 40rem;
+        justify-content: flex-start;
+        gap: 1rem;
     }
 `
