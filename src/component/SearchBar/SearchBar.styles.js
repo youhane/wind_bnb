@@ -83,3 +83,11 @@ export const CustomLabel = styled.div`
         border: 1px solid black;
     }
 `
+
+export const NumberOfGuests = styled.div`
+    position: absolute;
+    top: 20%;
+    left: 47%;
+    display: flex;
+    flex-direction: column;
+`

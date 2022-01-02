@@ -1,20 +1,18 @@
 import { Formik, Field } from 'formik'
-import React, { useMemo, useState } from 'react'
-import { CustomLabel, SearchButton, StyledForm, StyledInput, Wrapper } from './SearchBar.styles'
+import React, { useState } from 'react'
+import { CustomLabel, NumberOfGuests, SearchButton, StyledForm, StyledInput, Wrapper } from './SearchBar.styles'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import AddGuests from './AddGuests/AddGuests'
-import { GuestContext } from './AddGuests/GuestsContext'
 
 library.add(faSearch)
 
 export default function SearchBar() {
-    const [numberOfAdults, setNumberOfAdults] = useState(0)
-    const guestProvider = useMemo(() => ({ numberOfAdults, setNumberOfAdults }), [numberOfAdults, setNumberOfAdults])
-
     const initialValues = { location: '', guests: '' }
+    const [numberofAdults, setNumberofAdults] = useState(0)
+    const [numberofChildren, setNumberofChildren] = useState(0)
 
     const location = [
         {
@@ -60,11 +58,12 @@ export default function SearchBar() {
                             name="guests"
                             placeholder="Add guests"
                             label="Guests"
-                            value={numberOfAdults ? numberOfAdults : ''}
+                            value={numberofAdults && numberofChildren ? numberofAdults + numberofChildren : ''}
                         />
-                        <GuestContext.Provider value={guestProvider}>
-                            <AddGuests type="Adults" text="Ages 13 or above" />
-                        </GuestContext.Provider>
+                        <NumberOfGuests>
+                            <AddGuests type="Adults" text="Ages 13 or above" setNumberOfPeople={setNumberofAdults} />
+                            <AddGuests type="Children" text="Ages 2 - 12" setNumberOfPeople={setNumberofChildren} />
+                        </NumberOfGuests>
                         <SearchButton type='submit'><FontAwesomeIcon icon="search" /><p>Search</p></SearchButton>
                     </div>
                 </StyledForm>
