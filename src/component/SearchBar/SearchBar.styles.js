@@ -61,6 +61,7 @@ export const SearchButton = styled.button`
     padding: 1rem;
     border-radius: .7rem;
     height: 3rem;
+    margin-right: 1rem;
     p{
         margin-left: 1rem;
     }
@@ -90,4 +91,14 @@ export const NumberOfGuests = styled.div`
     left: 47%;
     display: flex;
     flex-direction: column;
+`
+
+export const CloseSearchBar = styled.button`
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 `

@@ -7,9 +7,9 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faSearch)
 
-export default function Search() {
+export default function Search({ toggleSearchBar }) {
     return (
-        <Wrapper>
+        <Wrapper onClick={toggleSearchBar}>
             <div>
                 <p>Helsinki, Finland</p>
                 <input type="text" placeholder='Add guests' />

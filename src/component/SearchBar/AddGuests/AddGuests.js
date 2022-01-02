@@ -14,9 +14,9 @@ export default function AddGuests({ type, text, setNumberOfPeople }) {
             <label htmlFor={type}>{type}</label>
             <p>{text}</p>
             <div>
-                <button onClick={() => { setInput(--input) }}>-</button>
+                <button type='button' onClick={() => { setInput(--input) }}>-</button>
                 <Input type="text" name={type} placehdolder='0' value={input} />
-                <button onClick={() => { setInput(++input) }}>+</button>
+                <button type='button' onClick={() => { setInput(++input) }}>+</button>
             </div>
         </Wrapper >
     )
