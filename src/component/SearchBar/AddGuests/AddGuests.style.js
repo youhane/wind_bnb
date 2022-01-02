@@ -35,4 +35,23 @@ export const Wrapper = styled.div`
     button:hover{
         background: lightgrey;
     }
+
+    @media (max-width: 376px){
+        margin-top: 1rem;
+        input{
+            font-size: 1.3rem;
+            width: 3rem;
+        }
+        button{
+            font-size: 2rem;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        p{
+            font-size: 1rem;
+        }
+        label{
+            font-size: 1.2rem;
+        }
+    }
 `

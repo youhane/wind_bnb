@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4);;
+    background-color: rgba(0,0,0,0.4);
 `
 
 export const StyledForm = styled(Form)`
@@ -18,7 +18,6 @@ export const StyledForm = styled(Form)`
     height: 50%;
     width: 100%;
     justify-content: center;
-
     .inputs{
         border-radius: 1rem;
         box-shadow: 0px 1px 6px 0px #0000001A;
@@ -43,6 +42,22 @@ export const StyledForm = styled(Form)`
     .inputs .field:focus-within{
         border: 1px solid black;
     }
+
+    @media (max-width: 376px){
+        height: 75%;
+        .inputs{
+            width: 30rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: none;
+        }
+        .inputs .field{
+            padding: 1.5rem;
+        }
+        label{
+            font-size: 1rem;
+        }
+    }
 `
 
 export const StyledInput = styled(Input)`
@@ -51,6 +66,11 @@ export const StyledInput = styled(Input)`
         outline: none;
         margin: .5rem 0;
         width: 100%;
+    }
+    @media (max-width: 376px){
+        input{
+            font-size: 1.3rem;
+        }
     }
 `
 
@@ -68,6 +88,13 @@ export const SearchButton = styled.button`
     :hover{
         filter: brightness(85%);
     }
+    @media (max-width: 376px){
+        position: absolute;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        bottom: 30%;
+    }
 `
 export const CustomLabel = styled.div`
     display: flex;
@@ -83,6 +110,11 @@ export const CustomLabel = styled.div`
     :focus-within{
         border: 1px solid black;
     }
+    @media (max-width: 376px){
+        select{
+            font-size: 1.3rem;
+        }
+    }
 `
 
 export const NumberOfGuests = styled.div`
@@ -91,6 +123,11 @@ export const NumberOfGuests = styled.div`
     left: 47%;
     display: flex;
     flex-direction: column;
+    left: 39%;
+    @media (max-width: 376px){
+        left: 30%;
+        top: 27%;
+    }
 `
 
 export const CloseSearchBar = styled.button`
@@ -101,4 +138,7 @@ export const CloseSearchBar = styled.button`
     background: transparent;
     border: none;
     cursor: pointer;
+    @media (max-width: 376px){
+        font-size: 1.5rem;
+    }
 `

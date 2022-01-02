@@ -39,7 +39,6 @@ export default function SearchBar({ toggleSearchBar }) {
     ]
 
     return (
-
         <Wrapper>
             <CloseSearchBar type='button' onClick={toggleSearchBar}>X</CloseSearchBar>
             <Formik

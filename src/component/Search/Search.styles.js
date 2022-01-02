@@ -24,12 +24,14 @@ export const Wrapper = styled.div`
     }
 
     @media (max-width: 376px){
-        div{
-            margin-left: auto;
-            margin-right: auto;
-        }
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         div *{
             padding: 1.5rem;
+        }
+        input{
+            width: 7rem;
+            font-size: 1rem;
         }
     }
 `

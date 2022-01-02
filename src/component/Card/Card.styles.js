@@ -19,8 +19,11 @@ export const Wrapper = styled.div`
     }
     @media (max-width: 376px){
         img{
-            width: 40rem;
-            height: 25rem;
+            width: 22rem;
+            height: 15rem;
+        }
+        .desc{
+            font-size: 1.3rem;
         }
     }
 `
@@ -36,6 +39,9 @@ export const Rating = styled.div`
     p{
         margin-left: .5rem;
     }
+    @media (max-width: 376px){
+        font-size: 1rem;
+    }
 `
 
 export const Info = styled.div`
@@ -48,8 +54,12 @@ export const Info = styled.div`
         font-size: .9rem;
     }
     @media (max-width: 376px){
-        width: 40rem;
+        width: 25rem;
         justify-content: flex-start;
         gap: 1rem;
+
+        .room{
+            font-size: 1.1rem;
+        }
     }
 `

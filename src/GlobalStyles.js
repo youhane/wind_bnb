@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 376px){
         .title{
-            width: 40rem;
+            width: 22rem;
         }
         .grid{
             grid-template-columns: auto;

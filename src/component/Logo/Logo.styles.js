@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
     }
 
     @media (max-width: 376px){
+        font-size: 1.3rem;
         *{
             margin-top: 1rem;
         }
