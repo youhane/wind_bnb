@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import AddGuests from './AddGuests/AddGuests'
+import { animated, useSpring } from 'react-spring'
 
 library.add(faSearch)
 
@@ -38,49 +39,55 @@ export default function SearchBar({ toggleSearchBar }) {
         },
     ]
 
+    const fadeIn = useSpring({
+        from: { opacity: 0 },
+        to: { opacity: 1 }
+    })
     return (
-        <Wrapper>
-            <CloseSearchBar type='button' onClick={toggleSearchBar}>X</CloseSearchBar>
-            <Formik
-                initialValues={initialValues}
-                onSubmit={(values) => {
-                    setAddGuestBar(false)
-                    setNumberofAdults(0)
-                    setNumberofChildren(0)
-                    toggleSearchBar()
-                }}
-            >
-                {props => (
-                    <StyledForm onSubmit={props.handleSubmit}>
-                        <div className='inputs'>
-                            <CustomLabel onClick={() => { setAddGuestBar(false) }}>
-                                <label htmlFor='location'>Location</label>
-                                <Field as="select" name="location" placeholder='Add location' options={location}>
-                                    {location.map((data) => {
-                                        return <option value={data.value} key={data.key}>{data.text}</option>
-                                    })}
-                                </Field>
-                            </CustomLabel>
-                            <StyledInput
-                                type="text"
-                                name="guests"
-                                placeholder="Add guests"
-                                label="Guests"
-                                onClick={() => { setAddGuestBar(true) }}
-                                value={numberofAdults && numberofChildren ? numberofAdults + numberofChildren : ''}
-                            />
-                            {
-                                addGuestBar && <NumberOfGuests>
-                                    <AddGuests type="Adults" text="Ages 13 or above" setNumberOfPeople={setNumberofAdults} />
-                                    <AddGuests type="Children" text="Ages 2 - 12" setNumberOfPeople={setNumberofChildren} />
-                                </NumberOfGuests>
-                            }
+        <animated.div style={fadeIn}>
+            <Wrapper>
+                <CloseSearchBar type='button' onClick={toggleSearchBar}>X</CloseSearchBar>
+                <Formik
+                    initialValues={initialValues}
+                    onSubmit={(values) => {
+                        setAddGuestBar(false)
+                        setNumberofAdults(0)
+                        setNumberofChildren(0)
+                        toggleSearchBar()
+                    }}
+                >
+                    {props => (
+                        <StyledForm onSubmit={props.handleSubmit}>
+                            <div className='inputs'>
+                                <CustomLabel onClick={() => { setAddGuestBar(false) }}>
+                                    <label htmlFor='location'>Location</label>
+                                    <Field as="select" name="location" placeholder='Add location' options={location}>
+                                        {location.map((data) => {
+                                            return <option value={data.value} key={data.key}>{data.text}</option>
+                                        })}
+                                    </Field>
+                                </CustomLabel>
+                                <StyledInput
+                                    type="text"
+                                    name="guests"
+                                    placeholder="Add guests"
+                                    label="Guests"
+                                    onClick={() => { setAddGuestBar(true) }}
+                                    value={numberofAdults && numberofChildren ? numberofAdults + numberofChildren : ''}
+                                />
+                                {
+                                    addGuestBar && <NumberOfGuests>
+                                        <AddGuests type="Adults" text="Ages 13 or above" setNumberOfPeople={setNumberofAdults} />
+                                        <AddGuests type="Children" text="Ages 2 - 12" setNumberOfPeople={setNumberofChildren} />
+                                    </NumberOfGuests>
+                                }
 
-                            <SearchButton type='submit'><FontAwesomeIcon icon="search" /><p>Search</p></SearchButton>
-                        </div>
-                    </StyledForm>
-                )}
-            </Formik>
-        </Wrapper >
+                                <SearchButton type='submit'><FontAwesomeIcon icon="search" /><p>Search</p></SearchButton>
+                            </div>
+                        </StyledForm>
+                    )}
+                </Formik>
+            </Wrapper>
+        </animated.div>
     )
 }
