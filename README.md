@@ -35,7 +35,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/youhane/input_challenge/blob/main/images/chrome_AtRPMGCCuR.png)
+![screenshot](https://github.com/youhane/wind_bnb/blob/main/images/chrome_hlpxLICKHD.jpg)
 
 ### Built With
 
