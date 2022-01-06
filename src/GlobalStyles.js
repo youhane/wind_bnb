@@ -24,6 +24,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @media (max-width: 376px){
+        .App{
+            overflow-x: hidden;
+        }
         body{
             margin: 0;
         }

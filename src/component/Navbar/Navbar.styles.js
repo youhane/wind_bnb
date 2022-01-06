@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     }
 
     @media (max-width: 376px){
-        width: 27rem;
+        width: auto;
         .mainNav{
             flex-direction: column;
         }

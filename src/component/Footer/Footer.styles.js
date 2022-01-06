@@ -9,4 +9,7 @@ export const Wrapper = styled.div`
     a{
         font-weight:700;
     }
+    @media (max-width: 376px){
+        font-size: .9rem;
+    }
 `

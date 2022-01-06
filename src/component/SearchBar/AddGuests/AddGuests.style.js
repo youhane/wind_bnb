@@ -37,12 +37,12 @@ export const Wrapper = styled.div`
     }
 
     @media (max-width: 376px){
-        margin-top: 1rem;
+        margin-top: 2rem;
         .field{
             width: 3rem !important;
         }
         .ui, .input, input{
-            font-size: 1.3rem;
+            font-size: 1rem;
             width: 3rem;
             padding: 0;
             margin: 0;
@@ -53,10 +53,10 @@ export const Wrapper = styled.div`
             margin-bottom: auto;
         }
         p{
-            font-size: 1rem;
+            font-size: .9rem;
         }
         label{
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 `

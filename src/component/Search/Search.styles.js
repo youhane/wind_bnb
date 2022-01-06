@@ -33,5 +33,8 @@ export const Wrapper = styled.div`
             width: 7rem;
             font-size: 1rem;
         }
+        p{
+            font-size: .9rem;
+        }
     }
 `

@@ -33,6 +33,10 @@ export const Host = styled.div`
     border-radius: .8rem;
     padding: .3rem .5rem;
     font-weight: 700;
+    @media (max-width: 376px){
+        padding: .1rem .3rem;
+        font-size: .8rem;
+    }
 `
 
 export const Rating = styled.div`
@@ -56,10 +60,10 @@ export const Info = styled.div`
     @media (max-width: 376px){
         width: 25rem;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: .5rem;
 
         .room{
-            font-size: 1.1rem;
+            font-size: .9rem;
         }
     }
 `

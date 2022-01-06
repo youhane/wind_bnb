@@ -44,7 +44,7 @@ export const StyledForm = styled(Form)`
     }
 
     @media (max-width: 376px){
-        height: 75%;
+        height: 80%;
         width: 25rem;
         .inputs{
             width: 30rem;
@@ -100,7 +100,7 @@ export const SearchButton = styled.button`
         font-size: 1.3rem;
         display: flex;
         align-items: center;
-        bottom: 30%;
+        bottom: 25%;
     }
 `
 export const CustomLabel = styled.div`
@@ -150,6 +150,6 @@ export const CloseSearchBar = styled.button`
     cursor: pointer;
     @media (max-width: 376px){
         font-size: 1.5rem;
-        right: 4rem;
+        right: .5rem;
     }
 `
