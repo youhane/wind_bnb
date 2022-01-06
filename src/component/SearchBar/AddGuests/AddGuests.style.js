@@ -38,9 +38,14 @@ export const Wrapper = styled.div`
 
     @media (max-width: 376px){
         margin-top: 1rem;
-        input{
+        .field{
+            width: 3rem !important;
+        }
+        .ui, .input, input{
             font-size: 1.3rem;
             width: 3rem;
+            padding: 0;
+            margin: 0;
         }
         button{
             font-size: 2rem;

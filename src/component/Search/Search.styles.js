@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
         margin-top: 1rem;
         margin-bottom: 1rem;
         div *{
-            padding: 1.5rem;
+            padding: 1rem;
         }
         input{
             width: 7rem;

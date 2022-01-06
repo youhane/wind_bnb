@@ -24,6 +24,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @media (max-width: 376px){
+        body{
+            margin: 0;
+        }
         .title{
             width: 22rem;
         }

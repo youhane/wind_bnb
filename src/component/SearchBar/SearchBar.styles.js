@@ -45,6 +45,7 @@ export const StyledForm = styled(Form)`
 
     @media (max-width: 376px){
         height: 75%;
+        width: 25rem;
         .inputs{
             width: 30rem;
             display: flex;
@@ -52,10 +53,14 @@ export const StyledForm = styled(Form)`
             box-shadow: none;
         }
         .inputs .field{
-            padding: 1.5rem;
+            border: none !important;
+            outline: none !important;
         }
         label{
             font-size: 1rem;
+        }
+        label:not([for="location"]){
+            padding: 0 2.5rem;
         }
     }
 `
@@ -68,7 +73,9 @@ export const StyledInput = styled(Input)`
         width: 100%;
     }
     @media (max-width: 376px){
+        padding: 0 2.5rem;
         input{
+            width: 10rem;
             font-size: 1.3rem;
         }
     }
@@ -111,6 +118,9 @@ export const CustomLabel = styled.div`
         border: 1px solid black;
     }
     @media (max-width: 376px){
+        border: none !important;
+        outline: none !important;
+        width: 20rem;
         select{
             font-size: 1.3rem;
         }
@@ -140,5 +150,6 @@ export const CloseSearchBar = styled.button`
     cursor: pointer;
     @media (max-width: 376px){
         font-size: 1.5rem;
+        right: 4rem;
     }
 `
