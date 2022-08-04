@@ -23,7 +23,11 @@ export const Wrapper = styled.div`
         outline:none
     }
 
-    @media (max-width: 376px){
+    @media (max-width: 768px){
+        margin-top: 1.5rem;
+    }
+
+    @media (max-width: 320px){
         margin-top: 1rem;
         margin-bottom: 1rem;
         div *{

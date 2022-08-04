@@ -12,8 +12,22 @@ export const Wrapper = styled.div`
         margin: .5rem 1rem;
     }
 
-    @media (max-width: 376px){
+    @media (max-width: 768px){
+        width: 80rem;
+        display: flex;
+        align-items: center;
+
+        .mainNav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 320px){
         width: auto;
+
         .mainNav{
             flex-direction: column;
         }
